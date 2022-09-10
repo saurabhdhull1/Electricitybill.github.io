@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elecricity bill</title>
+    <style>
+        #unit{
+            height: 30px;
+            width: 97%;
+            margin-right: 10px;
+            border-radius:5px;
+        }
+        .btn{
+            background-color:rgb(98, 255, 93); 
+            color: rgb(0, 0, 0);
+            border:1px solid black; 
+            border-radius:5px;  
+            height: 35px; 
+            width: 49%;  
+            margin-top: 10px;
+        }
+        .btn:hover{
+          cursor: pointer;
+          background-color: rgb(160, 250, 142);
+        }
+        .btn1{
+            background-color:rgb(248, 107, 107); 
+            color: rgb(0, 0, 0);
+            border:1px solid black; 
+            border-radius:5px; 
+            height: 35px; 
+            width: 49%;  
+            margin-top: 10px;
+        }
+        .btn1:hover{
+          cursor: pointer;
+          background-color: rgb(250, 141, 141);
+        }
+        .bg{
+          background-color: rgb(219, 218, 215);
+          padding: 20px;
+          border-radius: 7px;
+          border: 2px solid black;
+          width: 450px;
+        }
+    </style>
+    <script>
+      function calbill() {
+        let unit = parseInt(document.getElementById("unit").value);
+        let total = unit * 4;
+        if (unit >= 1 && unit <= 100) {
+          document.getElementById("f1").innerHTML =
+            "=====================================";
+          document.getElementById("f2").innerHTML ="Total unit is :" + unit;
+          document.getElementById("f3").innerHTML ="Total bill ammount is :" + total+ "rs";
+          document.getElementById("f4").innerHTML ="Tex in Percentage :" + 0 + "%";
+          document.getElementById("f5").innerHTML ="Tax in rs is :" + 0 + "rs";
+          document.getElementById("f6").innerHTML ="Final bill ammount is :" + total + "rs";
+          document.getElementById("f7").innerHTML =
+            "=====================================";
+           
+        }
+        else if (unit > 100 && unit <= 200) {
+          text_in_per=2;
+          text_in_rs=total*text_in_per/100;
+          f_ammount=total+text_in_rs;
+          document.getElementById("f1").innerHTML =
+            "=====================================";
+          document.getElementById("f2").innerHTML ="Total unit is :" + unit;
+          document.getElementById("f3").innerHTML ="Total bill ammount is :" + total+ "rs";
+          document.getElementById("f4").innerHTML ="Tex in Percentage :" + text_in_per + "%";
+          document.getElementById("f5").innerHTML ="Tax in rs is :" + text_in_rs + "rs";
+          document.getElementById("f6").innerHTML ="Final bill ammount is :" + f_ammount + "rs";
+          document.getElementById("f7").innerHTML =
+            "=====================================";
+        }
+        else if (unit > 200 && unit <= 300) {
+          text_in_per=4;
+          text_in_rs=total*text_in_per/100;
+          f_ammount=total+text_in_rs;
+          document.getElementById("f1").innerHTML =
+            "=====================================";
+          document.getElementById("f2").innerHTML ="Total unit is :" + unit;
+          document.getElementById("f3").innerHTML ="Total bill ammount is :" + total+ "rs";
+          document.getElementById("f4").innerHTML ="Tex in Percentage :" + text_in_per + "%";
+          document.getElementById("f5").innerHTML ="Tax in rs is :" + text_in_rs + "rs";
+          document.getElementById("f6").innerHTML ="Final bill ammount is :" + f_ammount + "rs";
+          document.getElementById("f7").innerHTML =
+            "=====================================";
+        }
+        else if (unit > 300 && unit <= 400) {
+          text_in_per=6;
+          text_in_rs=total*text_in_per/100;
+          f_ammount=total+text_in_rs;
+          document.getElementById("f1").innerHTML =
+            "=====================================";
+          document.getElementById("f2").innerHTML ="Total unit is :" + unit;
+          document.getElementById("f3").innerHTML ="Total bill ammount is :" + total+ "rs";
+          document.getElementById("f4").innerHTML ="Tex in Percentage :" + text_in_per + "%";
+          document.getElementById("f5").innerHTML ="Tax in rs is :" + text_in_rs + "rs";
+          document.getElementById("f6").innerHTML ="Final bill ammount is :" + f_ammount + "rs";
+          document.getElementById("f7").innerHTML =
+            "=====================================";
+        }
+        else if (unit > 400 && unit <= 500) {
+          text_in_per=8;
+          text_in_rs=total*text_in_per/100;
+          f_ammount=total+text_in_rs;
+          document.getElementById("f1").innerHTML =
+            "=====================================";
+          document.getElementById("f2").innerHTML ="Total unit is :" + unit;
+          document.getElementById("f3").innerHTML ="Total bill ammount is :" + total+ "rs";
+          document.getElementById("f4").innerHTML ="Tex in Percentage :" + text_in_per + "%";
+          document.getElementById("f5").innerHTML ="Tax in rs is :" + text_in_rs + "rs";
+          document.getElementById("f6").innerHTML ="Final bill ammount is :" + f_ammount + "rs";
+          document.getElementById("f7").innerHTML =
+            "=====================================";
+        }
+        else if (unit > 500) {
+          text_in_per=12;
+          text_in_rs=total*text_in_per/100;
+          f_ammount=total+text_in_rs;
+          document.getElementById("f1").innerHTML =
+            "=====================================";
+          document.getElementById("f2").innerHTML ="Total unit is :" + unit;
+          document.getElementById("f3").innerHTML ="Total bill ammount is :" + total+ "rs";
+          document.getElementById("f4").innerHTML ="Tex in Percentage :" + text_in_per + "%";
+          document.getElementById("f5").innerHTML ="Tax in rs is :" + text_in_rs + "rs";
+          document.getElementById("f6").innerHTML ="Final bill ammount is :" + f_ammount + "rs";
+          document.getElementById("f7").innerHTML =
+            "=====================================";
+        }
+        else{
+          document.getElementById("f1").innerHTML =
+            "=====================================";
+          document.getElementById("f2").innerHTML ="";
+          document.getElementById("f3").innerHTML ="";
+          document.getElementById("f4").innerHTML ="Invalid input";
+          document.getElementById("f5").innerHTML ="";
+          document.getElementById("f6").innerHTML ="";
+          document.getElementById("f7").innerHTML =
+            "=====================================";
+        }
+      }
+      function printbill(){
+        document.getElementById("unit").style.display="none";
+        document.getElementById("hide").style.display="none";
+        document.getElementById("hide1").style.display="none";
+        print();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bg">
+      <input type="text" placeholder="Enter your units" id="unit"/><br>
+      <button onclick="calbill()" id="hide" class="btn">Calculate bill</button>
+      <button onclick="printbill()" id="hide1" class="btn1">Print bill</button><br>
+      <div id="f1"></div>
+      <div id="f2"></div>
+      <div id="f3"></div>
+      <div id="f4"></div>
+      <div id="f5"></div>
+      <div id="f6"></div>
+      <div id="f7"></div>
+    </div>
+  </body>
+</html>
